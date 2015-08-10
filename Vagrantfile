@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.network "forwarded_port", guest: 8888, host: 8888
 	config.vm.network "forwarded_port", guest: 8887, host: 8887
+	config.vm.network "forwarded_port", guest: 5858, host: 5858
 	
 	config.vm.provider :virtualbox do |vb|
 		vb.customize ['modifyvm', :id, '--usb', 'on']
